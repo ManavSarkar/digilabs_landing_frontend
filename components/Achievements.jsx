@@ -42,7 +42,7 @@ const Achievements = () => {
   };
   return (
     <div>
-      <div className="flex lg:flex-wrap flex-col items-center justify-center">
+      <div className="flex lg:flex-row flex-col items-center justify-center">
         {achievementData.map((item, index) => {
           return <AchievementItem itemData={item} key={index} />;
         })}

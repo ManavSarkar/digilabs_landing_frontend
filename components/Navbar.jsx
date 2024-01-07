@@ -84,7 +84,7 @@ const Navbar = () => {
                 <Close className="ml-4 text-3xl" />
               )}
 
-              <span class="sr-only">Open main menu</span>
+              <span className="sr-only">Open main menu</span>
             </button>
           </div>
         </div>
