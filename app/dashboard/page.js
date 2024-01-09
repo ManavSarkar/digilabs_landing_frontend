@@ -7,11 +7,13 @@ import React, { useEffect, useState } from 'react'
 const DashboardPage = () => {
     const [loggedIn, setloggedIn] = useState(false)
     const router = useRouter()
-    const userData = JSON.parse(localStorage.getItem('user'))
+    const [userData, setUserData] = useState({})
     useEffect(() => {
         const token = localStorage.getItem('token')
         if (token) {
             setloggedIn(true)
+            const user = JSON.parse(localStorage.getItem('user'))
+            setUserData(user)
         }
         else {
             router.replace('/login')
